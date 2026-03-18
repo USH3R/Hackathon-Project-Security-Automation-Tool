@@ -1,11 +1,12 @@
-import os
+# The "Linguist-Defender" Logic
+def translate_alert(tactic_id):
+    mapping = {
+        "T1190": "An attacker is trying to exploit a hole in our public web software.",
+        "T1003.001": "An intruder is attempting to steal passwords directly from the computer's memory.",
+        "T1486": "Critical Alert: Files are being locked and held for ransom."
+    }
+    return mapping.get(tactic_id, "Unknown technical event detected. Investigation required.")
 
-# A simple tool to format suspicious IPs for a blocklist
-def add_to_blocklist(ip_address):
-    with open("blocklist.txt", "a") as file:
-        file.write(ip_address + "\n")
-    print(f"Successfully automated: {ip_address} added to blocklist.")
-
-# Test the tool
-target_ip = input("Enter suspicious IP: ")
-add_to_blocklist(target_ip)
+# Example usage for your automation tool
+alert_id = "T1003.001"
+print(f"COMMUNICATIONS SUMMARY: {translate_alert(alert_id)}")
