@@ -4,17 +4,17 @@
 
 1. Open Codespace (Github) or any terminal and type this:
          
-         bash run.sh
+         bash demo.sh
          
 2. Or try the manual executable way (optional):
    Open Codespace (Github) or any terminal and type this:
          
-         chmod +x run.sh
+         chmod +x demo.sh
          
    Press enter.
    Then type:
          
-         ./run.sh
+         ./demo.sh
 
 **This tool reduces manual analysis time for SOC analysts.**
 
